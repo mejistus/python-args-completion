@@ -13,7 +13,6 @@ _python_args_completion() {
     else
         for (( i=CURRENT-1; i>=1; i-- )); do
             if [[ "${words[i]}" == --* ]]; then
-                # 找到了前面的参数，检查中间是否有其他参数
                 local has_other_arg=false
                 for (( j=i+1; j<CURRENT; j++ )); do
                     if [[ "${words[j]}" == --* ]]; then
